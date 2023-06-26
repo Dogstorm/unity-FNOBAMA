@@ -13,6 +13,11 @@ public class PlayerMoving : MonoBehaviour
     private float groundDrag;
     bool grounded;
 
+    [Header("Crouching")]
+    public float crouchYScale;
+    private float startYScale;
+    public bool isCrouching = false;
+
 
     public Transform orienation;
 
@@ -25,6 +30,9 @@ public class PlayerMoving : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        startYScale = transform.localScale.y;
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -54,6 +62,21 @@ public class PlayerMoving : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            isCrouching = true;
+            moveSpeed = 1f;
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+            isCrouching = false;
+            moveSpeed = 2f;
+        }
     }
 
     private void MovePlayer()

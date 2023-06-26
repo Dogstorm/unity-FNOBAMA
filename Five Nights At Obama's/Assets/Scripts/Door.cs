@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class DoorButton : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
+    
+    public void Interact()
+    {
+        PlayAnimation();
+    }
     [SerializeField] private Animator doorAnim = null;
 
     private bool doorOpen = false;
@@ -24,7 +28,7 @@ public class DoorButton : MonoBehaviour
 
     public void PlayAnimation()
     {
-        if(!doorOpen && !pauseInteraction)
+        if (!doorOpen && !pauseInteraction)
         {
             doorAnim.Play(openAnimationName, 0, 0.0f);
             doorOpen = true;
@@ -39,4 +43,3 @@ public class DoorButton : MonoBehaviour
         }
     }
 }
-
