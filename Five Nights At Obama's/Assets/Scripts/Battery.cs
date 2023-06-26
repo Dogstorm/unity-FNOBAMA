@@ -8,7 +8,7 @@ public class Battery : MonoBehaviour
 {
     public bool drainOverTime;
     public float drainRate;
-    public float batteryLevel = 100f;
+    public float batteryLevel = 100;
     public TMP_Text batteryText;
     void Start()
     {
@@ -17,7 +17,7 @@ public class Battery : MonoBehaviour
 
     void Update()
     {
-        batteryText.text = string.Format(batteryLevel.ToString("0"));
+        batteryText.text = string.Format(batteryLevel.ToString("0.01%"));
         if(drainOverTime == true)
         {
             batteryLevel -= drainRate;
