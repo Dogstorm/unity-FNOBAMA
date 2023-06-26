@@ -3126,6 +3126,7 @@ MonoBehaviour:
   Player: {fileID: 735773573}
   mainCamera: {fileID: 963194225}
   promptText: {fileID: 913520290}
+  crossHair: {fileID: 3478542}
 --- !u!65 &911543139
 BoxCollider:
   m_ObjectHideFlags: 0

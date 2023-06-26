@@ -14,6 +14,7 @@ public class Cams : MonoBehaviour, IInteractable
     public GameObject Player;
     public GameObject mainCamera;
     public GameObject promptText;
+    public GameObject crossHair;
     public void Interact()
     {
         playerCam.enabled = false;
@@ -22,7 +23,7 @@ public class Cams : MonoBehaviour, IInteractable
        Player.SetActive(false);
         mainCamera.SetActive(false);
         promptText.SetActive(false);
-
+        crossHair.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -76,6 +77,7 @@ public class Cams : MonoBehaviour, IInteractable
             Player.SetActive(true);
             mainCamera.SetActive(true);
             promptText.SetActive(true);
+            crossHair.SetActive(true);
         }
     }
 }
