@@ -772,7 +772,6 @@ Transform:
   - {fileID: 1966844758}
   - {fileID: 1958374454}
   - {fileID: 1130438924}
-  - {fileID: 911543142}
   - {fileID: 889483820}
   - {fileID: 46607715}
   - {fileID: 511014283}
@@ -1497,7 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79925084e00cf024aa6934337c2d59d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptMessage: Activate Door
+  promptMessage: Open Door
 --- !u!1 &603496972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2755,7 @@ MonoBehaviour:
   camsActivated: 0
   Player: {fileID: 735773573}
   mainCamera: {fileID: 963194225}
+  promptText: {fileID: 913520290}
 --- !u!65 &911543139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2835,12 +2835,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911543137}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.256, y: 1.2845, z: -1.4088}
-  m_LocalScale: {x: 0.84382766, y: 0.6658273, z: 0.5828292}
+  m_LocalPosition: {x: 0.256, y: 1.2845, z: -11.4088}
+  m_LocalScale: {x: 0.84382766, y: 0.6658274, z: 0.5828293}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 204073070}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &911543143
 MonoBehaviour:

@@ -13,6 +13,7 @@ public class Cams : MonoBehaviour, IInteractable
     public bool camsActivated = false;
     public GameObject Player;
     public GameObject mainCamera;
+    public GameObject promptText;
     public void Interact()
     {
         playerCam.enabled = false;
@@ -20,6 +21,7 @@ public class Cams : MonoBehaviour, IInteractable
         camsActivated = true;
        Player.SetActive(false);
         mainCamera.SetActive(false);
+        promptText.SetActive(false);
 
     }
 
@@ -73,6 +75,7 @@ public class Cams : MonoBehaviour, IInteractable
             camsActivated = false;
             Player.SetActive(true);
             mainCamera.SetActive(true);
+            promptText.SetActive(true);
         }
     }
 }
