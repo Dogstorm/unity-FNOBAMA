@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cams : MonoBehaviour, IInteractable
 {
+    Battery battery;
     public Camera Cam1;
     public Camera Cam2;
     public Camera Cam3;
@@ -21,18 +22,24 @@ public class Cams : MonoBehaviour, IInteractable
         mainCamera.SetActive(false);
 
     }
-   
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-       Cam1.enabled = false;
-       Cam2.enabled = false;
-       Cam3.enabled = false;
+        Cam1.enabled = false;
+        Cam2.enabled = false;
+        Cam3.enabled = false;
+
+        battery = GetComponent<Battery>();
+       
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+      
         if (camsActivated == false)
         {
             playerCam.enabled = true;

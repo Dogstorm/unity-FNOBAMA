@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 535848585}
   m_Layer: 3
   m_Name: Button
-  m_TagString: DoorButton
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf2c11fe00176541892ef139d1de073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drainOverTime: 1
+  drainOverTime: 0
   drainRate: 0.001
   batteryLevel: 100
   batteryText: {fileID: 1760052494}
@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 911543138}
   m_Layer: 3
   m_Name: CameraButton
-  m_TagString: DoorButton
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
