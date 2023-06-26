@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class Battery : MonoBehaviour
     public bool drainOverTime;
     public float drainRate;
     public float batteryLevel = 100f;
-    public Text batteryText;
+    public TMP_Text batteryText;
     void Start()
     {
         
