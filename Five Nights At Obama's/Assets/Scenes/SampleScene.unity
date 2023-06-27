@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
-  distance: 3
+  distance: 2
   mask:
     serializedVersion: 2
     m_Bits: 8
@@ -2584,8 +2584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782973020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.018873775, y: -0.7636529, z: 0}
-  m_LocalScale: {x: 4.813318, y: 0.53192407, z: 1}
+  m_LocalPosition: {x: -0.018873775, y: -0.7464, z: 0}
+  m_LocalScale: {x: 5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 889483820}
