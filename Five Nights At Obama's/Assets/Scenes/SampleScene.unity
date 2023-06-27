@@ -400,6 +400,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3eb38cf23799c804ba01db8e56085723, type: 3}
   m_PrefabInstance: {fileID: 1935671581}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &125159303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
+  m_PrefabInstance: {fileID: 234888682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &125159307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125159303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e58f46acc894c645acd3b8c57bbf4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: e55e6ac9f2c50074ea51ab764ad1a0b3, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 8070c4574ba684f4fbc93fa3f6a7e5b5, type: 2}
+  buttonHitBox: {fileID: 535848580}
 --- !u!1 &130924640 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 985e7e602d923284b8c03b5c80846a67, type: 3}
@@ -880,10 +900,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: -678588488315902003, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3da4429964326d7499ad98bf136e67d9, type: 2}
+    - target: {fileID: -516098083770646512, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
+      propertyPath: m_Name
+      value: ButtonMain
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
       propertyPath: m_Name
       value: LeftDoorButton
@@ -892,13 +920,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e55e6ac9f2c50074ea51ab764ad1a0b3, type: 2}
+    - target: {fileID: 8416272007918961125, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
+      propertyPath: m_Name
+      value: ButtonGlass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 535848581}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 125159307}
   m_SourcePrefab: {fileID: 100100000, guid: c7b7062c089ddfe4080a2f30ce1e2bfb, type: 3}
 --- !u!1 &305711305 stripped
 GameObject:
@@ -1373,6 +1408,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: a8d3f26776f4a5442afa22bd69028830, type: 3}
       insertIndex: -1
       addedObject: {fileID: 305711307}
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: a8d3f26776f4a5442afa22bd69028830, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2064817945}
   m_SourcePrefab: {fileID: 100100000, guid: a8d3f26776f4a5442afa22bd69028830, type: 3}
 --- !u!4 &511014283 stripped
 Transform:
@@ -1593,11 +1631,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 1264997423}
+  doorOpen: 0
   openAnimationName: Close01
   closeAnimationName: Open01
   buttonHitBox: {fileID: 535848580}
   waitTimer: 1
-  pauseInteraction: 0
 --- !u!114 &535848586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,11 +2794,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 941225525}
+  doorOpen: 0
   openAnimationName: Close02
   closeAnimationName: Open02
   buttonHitBox: {fileID: 799722279}
   waitTimer: 1
-  pauseInteraction: 0
 --- !u!65 &799722283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6271,6 +6309,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2064817941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: a8d3f26776f4a5442afa22bd69028830, type: 3}
+  m_PrefabInstance: {fileID: 487215521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2064817945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064817941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e58f46acc894c645acd3b8c57bbf4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMaterial: {fileID: 2100000, guid: e55e6ac9f2c50074ea51ab764ad1a0b3, type: 2}
+  greenMaterial: {fileID: 2100000, guid: 8070c4574ba684f4fbc93fa3f6a7e5b5, type: 2}
+  buttonHitBox: {fileID: 799722279}
 --- !u!1 &2093409922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2550463727306718371, guid: 7b57ad5902d112c4cbe46268f50b136e, type: 3}
