@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Handheld_Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 6829333093618665122, guid: e585070f5d15a58428d5e7bdb79b8f00, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e55e6ac9f2c50074ea51ab764ad1a0b3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1484,7 +1488,7 @@ GameObject:
   - component: {fileID: 535848585}
   - component: {fileID: 535848586}
   m_Layer: 3
-  m_Name: Button
+  m_Name: ButtonHitBox1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1591,6 +1595,7 @@ MonoBehaviour:
   doorAnim: {fileID: 1264997423}
   openAnimationName: Close01
   closeAnimationName: Open01
+  buttonHitBox: {fileID: 535848580}
   waitTimer: 1
   pauseInteraction: 0
 --- !u!114 &535848586
@@ -1605,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79925084e00cf024aa6934337c2d59d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptMessage: Open Door
+  promptMessage: Close Door
 --- !u!1 &575886072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,7 +2709,7 @@ GameObject:
   - component: {fileID: 799722282}
   - component: {fileID: 799722281}
   m_Layer: 3
-  m_Name: Button
+  m_Name: ButtonHitBox2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2737,7 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79925084e00cf024aa6934337c2d59d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptMessage: Open Door
+  promptMessage: Close Door
 --- !u!114 &799722282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,6 +2758,7 @@ MonoBehaviour:
   doorAnim: {fileID: 941225525}
   openAnimationName: Close02
   closeAnimationName: Open02
+  buttonHitBox: {fileID: 799722279}
   waitTimer: 1
   pauseInteraction: 0
 --- !u!65 &799722283
