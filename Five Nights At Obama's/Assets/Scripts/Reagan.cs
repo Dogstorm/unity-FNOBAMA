@@ -13,7 +13,8 @@ public class Reagan : MonoBehaviour
     public GameObject spot2;
     void Start()
     {
-        randomtimetoMove = 0;   
+        randomtimetoMove = 0;
+        
     }
     void randomGenerate()
     {
@@ -25,12 +26,27 @@ public class Reagan : MonoBehaviour
     {
         if(randomtimetoMove <= 0)
         {
-            randomtimetoMove = Random.Range(40, 60);
+            randomtimetoMove = Random.Range(120, 320);
             randomGenerate();
         }
         if(randomtimetoMove > 0)
         {
             randomtimetoMove -= rate;
+        }
+
+        if(randomMove == 0)
+        {
+            reagan.transform.position = spot.transform.position;
+        }
+
+        if (randomMove == 1)
+        {
+            reagan.transform.position = spot1.transform.position;
+        }
+
+        if (randomMove == 2)
+        {
+            reagan.transform.position = spot2.transform.position;
         }
     }
 }
