@@ -1888,10 +1888,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1441034251318055522, guid: a342682600833bc47b53599c6744a69d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1624fee41542a114d93d166045f96457, type: 2}
     - target: {fileID: 919132149155446097, guid: a342682600833bc47b53599c6744a69d, type: 3}
       propertyPath: m_Name
       value: PartyRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 1385144051738174330, guid: a342682600833bc47b53599c6744a69d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1624fee41542a114d93d166045f96457, type: 2}
+    - target: {fileID: 8247994413960396516, guid: a342682600833bc47b53599c6744a69d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 13e2b3a08dd9a9544a24fb02ed5e5c1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
