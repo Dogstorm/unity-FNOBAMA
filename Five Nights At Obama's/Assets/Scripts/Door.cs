@@ -11,13 +11,18 @@ public class Door : MonoBehaviour, IInteractable
     }
     [SerializeField] private Animator doorAnim = null;
 
-    private bool doorOpen = false;
+    public bool doorOpen = false;
 
     [SerializeField] private string openAnimationName = "DoorOpen";
     [SerializeField] private string closeAnimationName = "DoorClose";
+    [SerializeField] GameObject buttonHitBox;
+    
+    
 
-    [SerializeField] private int waitTimer = 1;
-    [SerializeField] private bool pauseInteraction = false;
+    [SerializeField] int waitTimer;
+    private bool pauseInteraction = false;
+
+   
 
     private IEnumerator PauseDoorInteraction()
     {
@@ -33,6 +38,8 @@ public class Door : MonoBehaviour, IInteractable
             doorAnim.Play(openAnimationName, 0, 0.0f);
             doorOpen = true;
             StartCoroutine(PauseDoorInteraction());
+            buttonHitBox.GetComponent<DoorB>().promptMessage = "Open Door";
+            
         }
 
         else if (doorOpen && !pauseInteraction)
@@ -40,6 +47,8 @@ public class Door : MonoBehaviour, IInteractable
             doorAnim.Play(closeAnimationName, 0, 0.0f);
             doorOpen = false;
             StartCoroutine(PauseDoorInteraction());
+            buttonHitBox.GetComponent<DoorB>().promptMessage = "Close Door";
+            
         }
     }
 }
