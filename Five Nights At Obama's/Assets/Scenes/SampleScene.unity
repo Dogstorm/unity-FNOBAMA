@@ -1469,10 +1469,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 1264997423}
+  doorOpen: 0
   openAnimationName: Close01
   closeAnimationName: Open01
+  buttonHitBox: {fileID: 0}
   waitTimer: 1
-  pauseInteraction: 0
 --- !u!114 &535848586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,10 +2632,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 941225525}
+  doorOpen: 0
   openAnimationName: Close02
   closeAnimationName: Open02
+  buttonHitBox: {fileID: 0}
   waitTimer: 1
-  pauseInteraction: 0
 --- !u!65 &799722283
 BoxCollider:
   m_ObjectHideFlags: 0
