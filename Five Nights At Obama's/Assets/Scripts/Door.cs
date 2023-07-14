@@ -9,7 +9,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         PlayAnimation();
     }
-    [SerializeField] private Animator doorAnim = null;
+    [SerializeField] private Animator doorAnim;
 
     public bool doorOpen = false;
 
