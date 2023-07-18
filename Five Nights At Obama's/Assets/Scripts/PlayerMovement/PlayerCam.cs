@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
+    [SerializeField] private xFloatSO xSense;
+    [SerializeField] private yFloatSO ySense;
 
     public float sensX;
     public float sensY;
@@ -18,6 +20,8 @@ public class PlayerCam : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        
     }
 
     // Update is called once per frame
@@ -34,5 +38,7 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
+        sensX = xSense.Value;
+        sensY = ySense.Value;
     }
 }
