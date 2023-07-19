@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Cams : MonoBehaviour, IInteractable
 {
-    Battery battery;
+    [SerializeField]
+    private Battery battery;
     public Camera Cam1;
     public Camera Cam2;
     public Camera Cam3;
@@ -20,10 +21,11 @@ public class Cams : MonoBehaviour, IInteractable
         playerCam.enabled = false;
         Cam1.enabled = true;
         camsActivated = true;
-       Player.SetActive(false);
+        Player.SetActive(false);
         mainCamera.SetActive(false);
         promptText.SetActive(false);
         crossHair.SetActive(false);
+        
     }
 
     // Start is called before the first frame update
@@ -33,10 +35,10 @@ public class Cams : MonoBehaviour, IInteractable
         Cam2.enabled = false;
         Cam3.enabled = false;
 
-        battery = GetComponent<Battery>();
-       
-
         
+
+
+
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = false;
             Cam2.enabled = false;
             Cam3.enabled = false;
+            battery.drainOverTime = false;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 1 && camsActivated == true)
         {
@@ -63,6 +66,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = false;
             Cam2.enabled = false;
             Cam3.enabled = true;
+            
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 3 && camsActivated == true)
         {
@@ -70,6 +74,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = true;
             Cam2.enabled = false;
             Cam3.enabled = false;
+            
         }
         else if (Input.GetKeyDown(KeyCode.E) && camsActivated == true)
         {
@@ -78,6 +83,11 @@ public class Cams : MonoBehaviour, IInteractable
             mainCamera.SetActive(true);
             promptText.SetActive(true);
             crossHair.SetActive(true);
+            battery.drainOverTime = false;
+        }
+        if (camsActivated == true)
+        {
+            battery.drainOverTime = true;
         }
     }
 }

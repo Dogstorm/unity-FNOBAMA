@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    
+    [SerializeField]
+    private Battery battery;
     public void Interact()
     {
         PlayAnimation();
+        
     }
     [SerializeField] private Animator doorAnim;
 
@@ -38,8 +40,9 @@ public class Door : MonoBehaviour, IInteractable
             doorAnim.Play(openAnimationName, 0, 0.0f);
             doorOpen = true;
             StartCoroutine(PauseDoorInteraction());
-            buttonHitBox.GetComponent<DoorB>().promptMessage = "Open Door";
-            
+            buttonHitBox.GetComponent<DoorPrompt>().promptMessage = "Open Door";
+            battery.drainOverTime = true;
+
         }
 
         else if (doorOpen && !pauseInteraction)
@@ -47,8 +50,9 @@ public class Door : MonoBehaviour, IInteractable
             doorAnim.Play(closeAnimationName, 0, 0.0f);
             doorOpen = false;
             StartCoroutine(PauseDoorInteraction());
-            buttonHitBox.GetComponent<DoorB>().promptMessage = "Close Door";
-            
+            buttonHitBox.GetComponent<DoorPrompt>().promptMessage = "Close Door";
+            battery.drainOverTime = false;
+
         }
     }
 }

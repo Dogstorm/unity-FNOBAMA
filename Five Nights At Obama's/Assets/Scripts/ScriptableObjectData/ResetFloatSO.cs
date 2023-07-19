@@ -11,6 +11,7 @@ public class ResetFloatSO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Reseting Sense");
         xFloat.Value = DefaultSense;
         yFloat.Value = DefaultSense;
     }

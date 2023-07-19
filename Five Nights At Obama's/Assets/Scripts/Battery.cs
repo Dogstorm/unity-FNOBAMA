@@ -9,20 +9,14 @@ public class Battery : MonoBehaviour
 {
     public bool drainOverTime;
     [SerializeField] 
-    private float drainRate = 0.001f;
+    private int drainRate = 1;
     [SerializeField]
-    private float batteryLevel = 100f;
+    private int batteryLevel = 1000000000; // mult by 10 or add a 0 to increase the time it takes to reach 0
     [SerializeField]
     private TMP_Text batteryText;
     void Start()
     {
-       startDrain();
-    }
-
-    public void startDrain ()
-    {
-        Debug.Log("draining battery");
-      
+       
     }
 
     void Update()
@@ -30,12 +24,13 @@ public class Battery : MonoBehaviour
         if (drainOverTime == true)
         {
             
-            
-            //float realBattery = batteryLevel / 100;
             batteryLevel -= drainRate;
-            batteryLevel = Mathf.Round(batteryLevel * 100f) / 10000f;
-            batteryText.text = batteryLevel + "%";
+            batteryText.text = (batteryLevel/100).ToString() + "%";
         }
-        
+        if (batteryLevel <= 0)
+        {
+            batteryLevel = 0;
+            drainOverTime = false;
+        }
     }
 }

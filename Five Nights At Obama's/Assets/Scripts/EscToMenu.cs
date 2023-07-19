@@ -16,7 +16,7 @@ public class EscToMenu : MonoBehaviour
         if (sceneName == "Game")
         {
             Debug.Log("The Current Scene is the game");
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 SceneManager.LoadScene("Menu");
                 Debug.Log("changed scene");
