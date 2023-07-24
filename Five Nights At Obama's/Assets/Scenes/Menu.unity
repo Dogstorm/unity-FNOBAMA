@@ -2871,6 +2871,7 @@ GameObject:
   - component: {fileID: 1212499537}
   - component: {fileID: 1212499538}
   - component: {fileID: 1212499539}
+  - component: {fileID: 1212499540}
   m_Layer: 5
   m_Name: Y-SensitivitySlider
   m_TagString: Untagged
@@ -2970,6 +2971,23 @@ MonoBehaviour:
   ySenseSO: {fileID: 11400000, guid: ccd02ddc011780145bb4fa778dd2e76c, type: 2}
   slider: {fileID: 1212499538}
   sliderText: {fileID: 1296812999}
+--- !u!114 &1212499540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212499536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1ee631546e5434e9353a63005a0ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xFloat: {fileID: 11400000, guid: 9319070f0914daa469e776eec36dd004, type: 2}
+  yFloat: {fileID: 11400000, guid: ccd02ddc011780145bb4fa778dd2e76c, type: 2}
+  xdefault: 400
+  ydefault: 400
+  onlyOneValue: {fileID: 11400000, guid: 91ed6fed2f8ba7d4a8feb06fa156906c, type: 2}
 --- !u!1 &1214457387
 GameObject:
   m_ObjectHideFlags: 0
@@ -5979,12 +5997,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993960314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8bda7463c8b19c41a6b650eb842efe5, type: 3}
+  m_Script: {fileID: 11500000, guid: ca1ee631546e5434e9353a63005a0ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xFloat: {fileID: 11400000, guid: 9319070f0914daa469e776eec36dd004, type: 2}
   yFloat: {fileID: 11400000, guid: ccd02ddc011780145bb4fa778dd2e76c, type: 2}
-  DefaultSense: 400
+  xdefault: 400
+  ydefault: 400
+  onlyOneValue: {fileID: 11400000, guid: 91ed6fed2f8ba7d4a8feb06fa156906c, type: 2}
 --- !u!1 &2045216884
 GameObject:
   m_ObjectHideFlags: 0

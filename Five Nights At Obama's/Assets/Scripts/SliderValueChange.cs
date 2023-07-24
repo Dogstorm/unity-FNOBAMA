@@ -12,16 +12,19 @@ public class SliderValueChange : MonoBehaviour
     [SerializeField]
     private yFloatSO ySenseSO;
 
+    
+
     public Slider slider;
     public TextMeshProUGUI sliderText;
     // Start is called before the first frame update
+
+    
+
     void Start()
     {
         if (slider.name == "X-SensitivitySlider")
         {
             slider.value = xSenseSO.Value;
-            print(xSenseSO.Value);
-
         }
         else if (slider.name == "Y-SensitivitySlider")
         {
