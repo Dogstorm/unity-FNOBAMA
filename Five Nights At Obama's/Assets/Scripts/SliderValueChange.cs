@@ -20,6 +20,7 @@ public class SliderValueChange : MonoBehaviour
         if (slider.name == "X-SensitivitySlider")
         {
             slider.value = xSenseSO.Value;
+            print(xSenseSO.Value);
 
         }
         else if (slider.name == "Y-SensitivitySlider")

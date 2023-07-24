@@ -9,7 +9,10 @@ public class ResetFloatSO : MonoBehaviour
     [SerializeField] private yFloatSO yFloat;
     public float DefaultSense = 400f;
     // Start is called before the first frame update
-    void Start()
+
+    [RuntimeInitializeOnLoadMethod]
+
+     void OnRuntimeMethodLoad()
     {
         Debug.Log("Reseting Sense");
         xFloat.Value = DefaultSense;
