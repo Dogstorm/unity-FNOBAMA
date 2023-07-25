@@ -42,7 +42,7 @@ public class Door : MonoBehaviour, IInteractable
             StartCoroutine(PauseDoorInteraction());
             buttonHitBox.GetComponent<DoorPrompt>().promptMessage = "Open Door";
             battery.drainOverTime = true;
-
+           
         }
 
         else if (doorOpen && !pauseInteraction)
@@ -52,6 +52,7 @@ public class Door : MonoBehaviour, IInteractable
             StartCoroutine(PauseDoorInteraction());
             buttonHitBox.GetComponent<DoorPrompt>().promptMessage = "Close Door";
             battery.drainOverTime = false;
+            
 
         }
     }

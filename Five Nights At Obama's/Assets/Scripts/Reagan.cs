@@ -19,7 +19,7 @@ public class Reagan : MonoBehaviour
     void randomGenerate()
     {
         randomMove = Random.Range(0, 3);
-        Debug.Log("test");
+        Debug.Log("GeneratedRandomPos");
     }
     // Update is called once per frame
     void Update()

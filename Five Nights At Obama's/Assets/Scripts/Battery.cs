@@ -31,6 +31,7 @@ public class Battery : MonoBehaviour
         {
             batteryLevel = 0;
             drainOverTime = false;
+            print("drainSetToFalse");
         }
     }
 }

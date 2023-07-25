@@ -9,6 +9,9 @@ public class Cams : MonoBehaviour, IInteractable
     public Camera Cam1;
     public Camera Cam2;
     public Camera Cam3;
+    public Camera Cam4;
+    public Light Cam4Light;
+    public Camera Cam5;
     public Camera playerCam;
     public float startCamera = 1;
     public bool camsActivated = false;
@@ -25,7 +28,7 @@ public class Cams : MonoBehaviour, IInteractable
         mainCamera.SetActive(false);
         promptText.SetActive(false);
         crossHair.SetActive(false);
-        
+        battery.drainOverTime = !battery.drainOverTime;
     }
 
     // Start is called before the first frame update
@@ -34,10 +37,8 @@ public class Cams : MonoBehaviour, IInteractable
         Cam1.enabled = false;
         Cam2.enabled = false;
         Cam3.enabled = false;
-
-        
-
-
+        Cam4.enabled = false;
+        Cam5.enabled = false;
 
     }
 
@@ -51,7 +52,9 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = false;
             Cam2.enabled = false;
             Cam3.enabled = false;
-            battery.drainOverTime = false;
+            Cam4.enabled = false;
+            Cam5.enabled = false;
+            
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 1 && camsActivated == true)
         {
@@ -59,6 +62,8 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = false;
             Cam2.enabled = true;
             Cam3.enabled = false;
+            Cam4.enabled = false;
+            Cam5.enabled = false;
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 2 && camsActivated == true)
         {
@@ -66,14 +71,38 @@ public class Cams : MonoBehaviour, IInteractable
             Cam1.enabled = false;
             Cam2.enabled = false;
             Cam3.enabled = true;
+            Cam4.enabled = false;
+            Cam5.enabled = false;
             
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 3 && camsActivated == true)
+        {
+            startCamera = 4;
+            Cam1.enabled = false;
+            Cam2.enabled = false;
+            Cam3.enabled = false;
+            Cam4.enabled = true;
+            Cam5.enabled = false;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 4 && camsActivated == true)
+        {
+            startCamera = 5;
+            Cam1.enabled = false;
+            Cam2.enabled = false;
+            Cam3.enabled = false;
+            Cam4.enabled = false;
+            Cam5.enabled = true;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 5 && camsActivated == true)
         {
             startCamera = 1;
             Cam1.enabled = true;
             Cam2.enabled = false;
             Cam3.enabled = false;
+            Cam4.enabled = false;
+            Cam5.enabled = false;
             
         }
         else if (Input.GetKeyDown(KeyCode.E) && camsActivated == true)
@@ -85,9 +114,14 @@ public class Cams : MonoBehaviour, IInteractable
             crossHair.SetActive(true);
             battery.drainOverTime = false;
         }
-        if (camsActivated == true)
+        
+        if (Cam4.enabled == false)
         {
-            battery.drainOverTime = true;
+            Cam4Light.enabled = false;
+        }
+        else if (Cam4.enabled == true)
+        {
+            Cam4Light.enabled = true;
         }
     }
 }
