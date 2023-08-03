@@ -14,13 +14,15 @@ public class Battery : MonoBehaviour
     private float batteryLevel;
     [SerializeField]
     private TMP_Text batteryText;
+    [SerializeField]
+    private float batteryTickRate = 2f; // In Seconds
 
     IEnumerator Start()
     {
         batteryLevel = 100;
         while (true)
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(batteryTickRate); 
             PlayEverySecond();
         }
     }
