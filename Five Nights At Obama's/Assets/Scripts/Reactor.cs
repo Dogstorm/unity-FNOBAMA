@@ -8,8 +8,12 @@ public class Reactor : MonoBehaviour, IInteractable
     [SerializeField] private GameObject Hands;
     public void Interact()
     {
-        Battery.SetActive(true);
-        Hands.SetActive(false);
+        if (Hands.activeInHierarchy == true)
+        {
+            Battery.SetActive(true);
+            Hands.SetActive(false);
+        }
+        
 
     }
 
