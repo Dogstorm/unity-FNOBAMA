@@ -8021,7 +8021,7 @@ MonoBehaviour:
   timeTextHour: {fileID: 1903937212}
   timeTextMins: {fileID: 1407759335}
   timeTextDay: {fileID: 1356046723}
-  SecondsPerMinute: 10
+  SecondsPerMinute: 5
 --- !u!1 &737293342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8493015188241380710, guid: bd1ae05a41a137441b8049e6ed841550, type: 3}
