@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lincoln : MonoBehaviour
 {
-    public GameObject reagan;
+    public GameObject Char;
     public float randomMove;
     public float randomtimetoMove;
     public float rate = 0.001f;
@@ -36,17 +36,20 @@ public class Lincoln : MonoBehaviour
 
         if(randomMove == 0)
         {
-            reagan.transform.position = spot.transform.position;
+            //Char.transform.position = spot.transform.position;
+            Char.transform.SetParent = spot;
         }
 
         if (randomMove == 1)
         {
-            reagan.transform.position = spot1.transform.position;
+            //Char.transform.position = spot1.transform.position;
+            Char.transform.SetParent = spot1;
         }
 
         if (randomMove == 2)
         {
-            reagan.transform.position = spot2.transform.position;
+            //Char.transform.position = spot2.transform.position;
+            Char.transform.SetParent = spot2;
         }
     }
 }
