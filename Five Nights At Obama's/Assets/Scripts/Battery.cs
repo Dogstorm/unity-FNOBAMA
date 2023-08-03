@@ -20,7 +20,7 @@ public class Battery : MonoBehaviour
         batteryLevel = 100;
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2.5f);
             PlayEverySecond();
         }
     }

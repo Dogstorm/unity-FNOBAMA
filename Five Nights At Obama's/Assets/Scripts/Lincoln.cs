@@ -8,9 +8,9 @@ public class Lincoln : MonoBehaviour
     public float randomMove;
     public float randomtimetoMove;
     public float rate = 0.001f;
-    public GameObject spot;
-    public GameObject spot1;
-    public GameObject spot2;
+    public Transform spot;
+    public Transform spot1;
+    public Transform spot2;
     void Start()
     {
         randomtimetoMove = 0;
@@ -36,20 +36,17 @@ public class Lincoln : MonoBehaviour
 
         if(randomMove == 0)
         {
-            //Char.transform.position = spot.transform.position;
-            Char.transform.SetParent = spot;
+            Char.transform.position = spot.transform.position;
         }
 
         if (randomMove == 1)
         {
-            //Char.transform.position = spot1.transform.position;
-            Char.transform.SetParent = spot1;
+            Char.transform.position = spot1.transform.position;
         }
 
         if (randomMove == 2)
         {
-            //Char.transform.position = spot2.transform.position;
-            Char.transform.SetParent = spot2;
+            Char.transform.position = spot2.transform.position;
         }
     }
 }
