@@ -19,7 +19,7 @@ public class TimeWithDay : MonoBehaviour
     [SerializeField] private TMP_Text timeTextDay;
 
     private string TOD = " AM"; // Time Of Day
-    [SerializeField] private float batteryTickRate; // In Seconds
+    [SerializeField] private float SecondsPerMinute; // In Seconds
 
     IEnumerator Start()
     {
@@ -30,7 +30,7 @@ public class TimeWithDay : MonoBehaviour
         {
             PlayEverySecond();
             drainOverTime = true;
-            yield return new WaitForSeconds(batteryTickRate);
+            yield return new WaitForSeconds(SecondsPerMinute);
         }
     }
 
