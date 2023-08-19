@@ -38,16 +38,19 @@ public class Reagan : MonoBehaviour
         if(randomMove == 0)
         {
             reagan.transform.position = spot.transform.position;
+            reagan.transform.rotation = spot.transform.rotation;
         }
 
         if (randomMove == 1)
         {
             reagan.transform.position = spot1.transform.position;
+            reagan.transform.rotation = spot1.transform.rotation;
         }
 
         if (randomMove == 2)
         {
             reagan.transform.position = spot2.transform.position;
+            reagan.transform.rotation = spot2.transform.rotation;
         }
     }
 }
