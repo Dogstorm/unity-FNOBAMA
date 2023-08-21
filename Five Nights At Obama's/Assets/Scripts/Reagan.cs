@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class Reagan : MonoBehaviour
 {
@@ -16,6 +19,8 @@ public class Reagan : MonoBehaviour
     // use "animator.SetBool("IsMoving", true);" to start walk animation
     // use "animator.SetBool("IsMoving", false);" to stop wallk animation
 
+    public NavMeshAgent agent;
+
     void Start()
     {
         randomtimetoMove = 0;
@@ -23,9 +28,13 @@ public class Reagan : MonoBehaviour
     }
     void randomGenerate()
     {
+        float oldRandomMove = randomMove;
         randomMove = Random.Range(0, 3);
-        Debug.Log("GeneratedRandomPos");
-
+        if (randomMove == oldRandomMove)
+        {
+            randomGenerate();
+        }
+        Debug.Log("Reagans Generated Pos is " + randomMove);
     }
     // Update is called once per frame
     void Update()
@@ -42,20 +51,29 @@ public class Reagan : MonoBehaviour
 
         if(randomMove == 0)
         {
-            reagan.transform.position = spot.transform.position;
-            reagan.transform.rotation = spot.transform.rotation;
+            //reagan.transform.position = spot.transform.position;
+            //reagan.transform.rotation = spot.transform.rotation;
+            agent.SetDestination(spot.transform.position);
         }
 
         if (randomMove == 1)
         {
-            reagan.transform.position = spot1.transform.position;
-            reagan.transform.rotation = spot1.transform.rotation;
+            agent.SetDestination(spot1.transform.position);
         }
 
         if (randomMove == 2)
         {
-            reagan.transform.position = spot2.transform.position;
-            reagan.transform.rotation = spot2.transform.rotation;
+            agent.SetDestination(spot2.transform.position);
         }
+
+        if (agent.remainingDistance <= 0)
+        {
+            animator.SetBool("IsMoving", false);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", true);
+        }
+
     }
 }

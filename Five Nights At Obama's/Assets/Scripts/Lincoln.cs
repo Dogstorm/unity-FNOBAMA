@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -37,7 +36,7 @@ public class Lincoln : MonoBehaviour
         {
             randomGenerate();
         }
-        Debug.Log("Generated Pos is " + randomMove);
+        Debug.Log("Lincolns Generated Pos is " + randomMove);
     }
 
     // Update is called once per frame
