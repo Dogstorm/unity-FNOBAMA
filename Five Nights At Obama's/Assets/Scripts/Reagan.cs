@@ -11,6 +11,11 @@ public class Reagan : MonoBehaviour
     public GameObject spot;
     public GameObject spot1;
     public GameObject spot2;
+
+    [SerializeField] private Animator animator;
+    // use "animator.SetBool("IsMoving", true);" to start walk animation
+    // use "animator.SetBool("IsMoving", false);" to stop wallk animation
+
     void Start()
     {
         randomtimetoMove = 0;
