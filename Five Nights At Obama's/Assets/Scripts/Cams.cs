@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class Cams : MonoBehaviour, IInteractable
@@ -19,6 +20,9 @@ public class Cams : MonoBehaviour, IInteractable
     public GameObject mainCamera;
     public GameObject promptText;
     public GameObject crossHair;
+
+    private int currentCam;
+
     public void Interact()
     {
         playerCam.enabled = false;
@@ -45,7 +49,25 @@ public class Cams : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
-      
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentCam = currentCam + 1;
+            if (currentCam == 6)
+            {
+                currentCam = 1;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentCam = currentCam - 1;
+            if (currentCam == 0)
+            {
+                currentCam = 5;
+            }
+        }
+
+
         if (camsActivated == false)
         {
             playerCam.enabled = true;
@@ -56,7 +78,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam5.enabled = false;
             
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 1 && camsActivated == true)
+        if (currentCam == 1 && camsActivated == true)
         {
             startCamera = 2;
             Cam1.enabled = false;
@@ -65,7 +87,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam4.enabled = false;
             Cam5.enabled = false;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 2 && camsActivated == true)
+        else if (currentCam == 2 && camsActivated == true)
         {
             startCamera = 3;
             Cam1.enabled = false;
@@ -75,7 +97,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam5.enabled = false;
             
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 3 && camsActivated == true)
+        else if (currentCam == 3 && camsActivated == true)
         {
             startCamera = 4;
             Cam1.enabled = false;
@@ -85,7 +107,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam5.enabled = false;
 
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 4 && camsActivated == true)
+        else if (currentCam == 4 && camsActivated == true)
         {
             startCamera = 5;
             Cam1.enabled = false;
@@ -95,7 +117,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam5.enabled = true;
 
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && startCamera == 5 && camsActivated == true)
+        else if (currentCam == 5 && camsActivated == true)
         {
             startCamera = 1;
             Cam1.enabled = true;
@@ -105,7 +127,7 @@ public class Cams : MonoBehaviour, IInteractable
             Cam5.enabled = false;
             
         }
-        else if (Input.GetKeyDown(KeyCode.E) && camsActivated == true)
+        if (Input.GetKeyDown(KeyCode.E) && camsActivated == true)
         {
             camsActivated = false;
             Player.SetActive(true);
