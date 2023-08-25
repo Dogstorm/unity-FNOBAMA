@@ -40,6 +40,7 @@ public class Battery : MonoBehaviour
             batteryLevel = 0;
             drainOverTime = false;
             print("drainSetToFalse");
+            print("GAME OVER, National Anthem as screen fades to black, then maybe jumpscare"); // dont forget to add this
         }
 
         //Debug.Log(Time.time);
