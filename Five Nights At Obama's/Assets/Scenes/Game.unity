@@ -10690,7 +10690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948842843}
   m_Layer: 0
-  m_Name: R Spot
+  m_Name: R Spot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10709,7 +10709,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: -132.868, z: 0}
 --- !u!1 &949091799
 GameObject:
@@ -10760,7 +10760,7 @@ MonoBehaviour:
   Char: {fileID: 949091799}
   randomMove: 0
   randomtimetoMove: 0
-  rate: 0.001
+  rate: 1
   spot: {fileID: 57273926}
   spot1: {fileID: 560109273}
   spot2: {fileID: 277305831}
@@ -12196,7 +12196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1123969058 stripped
 GameObject:
@@ -13593,7 +13593,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -132.868, z: 0}
 --- !u!136 &1322741565
 CapsuleCollider:
@@ -16396,7 +16396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532193075}
   m_Layer: 0
-  m_Name: R Spot  (1)
+  m_Name: R Spot 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16415,7 +16415,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532246535 stripped
 GameObject:
@@ -17659,7 +17659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798197016}
   m_Layer: 0
-  m_Name: R Spot  (2)
+  m_Name: R Spot 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17678,7 +17678,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -29.735, z: 0}
 --- !u!1 &1803057280
 GameObject:
@@ -19856,7 +19856,7 @@ MonoBehaviour:
   reagan: {fileID: 2051032050}
   randomMove: 0
   randomtimetoMove: 0
-  rate: 0.01
+  rate: 1
   spot: {fileID: 948842842}
   spot1: {fileID: 1532193074}
   spot2: {fileID: 1798197015}

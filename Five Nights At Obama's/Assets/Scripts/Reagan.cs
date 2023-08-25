@@ -9,8 +9,8 @@ public class Reagan : MonoBehaviour
 {
     public GameObject reagan;
     public float randomMove;
-    public float randomtimetoMove;
-    public float rate = 0.001f;
+    public int randomtimetoMove;
+    public int rate = 1;
     public GameObject spot;
     public GameObject spot1;
     public GameObject spot2;
@@ -21,10 +21,25 @@ public class Reagan : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    void Start()
+    IEnumerator Start()
     {
         randomtimetoMove = 0;
-        
+
+        while (true)
+        {
+            if (randomtimetoMove <= 0)
+            {
+                randomtimetoMove = Random.Range(10, 20);
+                randomGenerate();
+            }
+            if (randomtimetoMove > 0)
+            {
+                randomtimetoMove -= rate;
+            }
+            yield return new WaitForSeconds(1);
+        }
+
+
     }
     void randomGenerate()
     {
@@ -39,15 +54,7 @@ public class Reagan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(randomtimetoMove <= 0)
-        {
-            randomtimetoMove = Random.Range(120, 320);
-            randomGenerate();
-        }
-        if(randomtimetoMove > 0)
-        {
-            randomtimetoMove -= rate;
-        }
+        
 
         if(randomMove == 0)
         {
